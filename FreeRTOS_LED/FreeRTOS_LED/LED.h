@@ -17,6 +17,4 @@ void LED_G_Toggle(void);
 //定义呼吸灯函数
 void LED_R_Breath(void);
 
-//按键控制灯的开关
-void LED_R_Key(void);
 #endif
