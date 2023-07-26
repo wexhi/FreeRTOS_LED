@@ -33,7 +33,7 @@ void LED_G_Toggle(void)
 	HAL_GPIO_TogglePin(LED_G_GPIO_Port, LED_G_Pin);
 }
 
-//呼吸灯函数
+//�����ƺ���
 void LED_R_Breath(void)
 {
 	while (1)
