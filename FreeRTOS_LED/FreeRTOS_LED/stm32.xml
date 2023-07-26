@@ -48,7 +48,7 @@
     <AllDependencies>
       <ProjectDependency>
         <RelativePath>..\..\STM32CubeIDE\.cproject</RelativePath>
-        <Timestamp>133348411741120837</Timestamp>
+        <Timestamp>133348560538681951</Timestamp>
       </ProjectDependency>
     </AllDependencies>
     <RootDirectory>
