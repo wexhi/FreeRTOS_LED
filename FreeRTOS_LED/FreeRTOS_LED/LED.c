@@ -33,7 +33,7 @@ void LED_G_Toggle(void)
 	HAL_GPIO_TogglePin(LED_G_GPIO_Port, LED_G_Pin);
 }
 
-//呼吸灯函数
+//定义呼吸灯函数
 void LED_R_Breath(void)
 {
 	while (1)
@@ -49,5 +49,21 @@ void LED_R_Breath(void)
 			__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_2, i);
 			HAL_Delay(20);
 		}    
+	}
+}
+
+//按键控制灯的开关
+void LED_R_Key(void)
+{
+	while (1)
+	{
+		if (HAL_GPIO_ReadPin(KEY_GPIO_Port, KEY_Pin) == GPIO_PIN_RESET)
+		{
+			LED_R_ON();
+		}
+		else
+		{
+			LED_R_OFF();
+		}
 	}
 }

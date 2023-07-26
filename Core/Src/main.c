@@ -57,7 +57,13 @@ void MX_FREERTOS_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)//中断回调函数
+{
+	if (GPIO_Pin == KEY_Pin)
+	{
+		LED_G_Toggle();
+	}
+}
 /* USER CODE END 0 */
 
 /**
@@ -93,7 +99,13 @@ int main(void)
 	HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);
     //以下默认注释，若需要查看任务1，2，3的运行情况，可取消注释
 	//任务1：实现呼吸灯效果；（定时器及 pwm）
+	LED_R_Breath();//呼吸灯,函数内有死循环，如要检查以下任务，请注释掉
 	
+	//任务2：实现按键控制灯的开关；（中断）,请往上查找中断回调函数
+	
+	//任务3：使用 freertos 点亮 RGB 三种颜色的灯；（freertos）
+	//任务3在freertos.c中
+
 	
   /* USER CODE END 2 */
 
