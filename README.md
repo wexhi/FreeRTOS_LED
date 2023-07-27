@@ -62,7 +62,7 @@ void StartTask_LED_G(void const * argument)
 >因为没有找到开发板上的蓝灯，所以使用绿灯代替蓝灯
 >并且没有实际拿到开发板，懒得分成三个项目写，因此可能会有bug，不过逻辑上来讲应该没有问题
 
-##5.Visual GDB使用方法
+## 5.Visual GDB使用方法
 >1.本代码没有使用keil编译，使用的是STM32CubeMX生成的工程，使用的编译器是arm-none-eabi-gcc  
 >2.使用Visual GDB，结合Visual Studio进行调试，首先需要安装Visual GDB插件，安装网址为https://visualgdb.com/  
 >3.安装好插件后，直接运行即可烧录。  
