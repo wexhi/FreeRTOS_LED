@@ -1,7 +1,7 @@
 # FreeRTOS_LED
 ## 1.任务1 实现呼吸灯效果；（定时器及 pwm）
 > 使用定时器TIM1频道2 实现pwm波，通过改变占空比实现呼吸灯效果
-> 逻辑为随着占空比的增加，灯亮度增加，随着占空比的减小，灯亮度减小
+> 逻辑为随着占空比的增加，灯亮度增加，随着占空比的减小，灯亮度减小  
 > 代码如下：
 ```c
 void LED_R_Breath(void)
@@ -61,4 +61,10 @@ void StartTask_LED_G(void const * argument)
 ## 4.备注
 >因为没有找到开发板上的蓝灯，所以使用绿灯代替蓝灯
 >并且没有实际拿到开发板，懒得分成三个项目写，因此可能会有bug，不过逻辑上来讲应该没有问题
+
+##5.Visual GDB使用方法
+>1.本代码没有使用keil编译，使用的是STM32CubeMX生成的工程，使用的编译器是arm-none-eabi-gcc  
+>2.使用Visual GDB，结合Visual Studio进行调试，首先需要安装Visual GDB插件，安装网址为https://visualgdb.com/  
+>3.安装好插件后，直接运行即可烧录。  
+>4.具体细节可参考B站视频https://www.bilibili.com/video/BV1NV411U7Bq/?spm_id_from=333.880.my_history.page.click&vd_source=cd7bff178b79967cd653b46af7fbb681
 
